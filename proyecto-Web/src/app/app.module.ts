@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ContactanosComponent } from './contactanos/contactanos.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -14,9 +16,12 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
     NavMenuComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+

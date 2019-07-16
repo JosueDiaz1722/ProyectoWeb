@@ -7,15 +7,11 @@ import { Component, Input } from '@angular/core';
 })
 export class NavMenuComponent  {
 
-  isExpanded = false;
-  @Input() public parentData;
-
-  collapse() {
-    this.isExpanded = false;
-  }
-
-  toggle() {
-    this.isExpanded = !this.isExpanded;
-  }
+    navbarOpen = false;
+  
+    toggleNavbar() {
+      this.navbarOpen = !this.navbarOpen;
+    }
+  
 
 }
