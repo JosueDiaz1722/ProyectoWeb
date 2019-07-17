@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 <nav class="navbar navbar-expand-lg  navbar-dark" style="background-color: #023B59">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" routerLink="">Navbar</a>
     <button class="navbar-toggler" type="button"
             (click)="toggleNavbar()">
       <span class="navbar-toggler-icon"></span>
@@ -10,16 +10,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent"  [ngClass]="{ 'show': navbarOpen }">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">PAQUETES <span class="sr-only">(current)</span></a>
+          <a class="nav-link" routerLink="paquetes">PAQUETES <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#">TRANSPORTE</a>
+          <a class="nav-link" routerLink="transporte">TRANSPORTE</a>
         </li>
         <li class="nav-item active">
-            <a class="nav-link" href="#">PEDIDOS</a>
+            <a class="nav-link" routerLink="pedidos">PEDIDOS</a>
         </li>
         <li class="nav-item active">
-            <a class="nav-link" href="#">COMPRA</a>
+            <a class="nav-link" routerLink="compra">COMPRA</a>
         </li>
     
         
