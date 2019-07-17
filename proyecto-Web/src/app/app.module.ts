@@ -7,6 +7,8 @@ import { ContactanosComponent } from './contactanos/contactanos.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { PaquetesComponent } from './paquetes/paquetes.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { TransporteComponent } from './transporte/transporte.component';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { PaquetesComponent } from './paquetes/paquetes.component';
     InicioComponent,
     ContactanosComponent,
     NavMenuComponent,
-    PaquetesComponent
+    PaquetesComponent,
+    PerfilComponent,
+    TransporteComponent
   ],
   imports: [
     BrowserModule,
@@ -25,5 +29,3 @@ import { PaquetesComponent } from './paquetes/paquetes.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-
