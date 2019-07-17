@@ -6,6 +6,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { ContactanosComponent } from './contactanos/contactanos.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { PaquetesComponent } from './paquetes/paquetes.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     AppComponent,
     InicioComponent,
     ContactanosComponent,
-    NavMenuComponent
+    NavMenuComponent,
+    PaquetesComponent
   ],
   imports: [
     BrowserModule,
