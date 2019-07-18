@@ -39,71 +39,21 @@ input.btn{
     cursor: pointer;
 }*/
 
-#fh5co-page {
-    position: relative;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
+.center {
+    text-align: center;
+    
   }
-
-  #fh5co-wrapper {
-    overflow-x: hidden;
-    position: relative;
-  }
-
-  #fh5co-header-section {
-    padding: 0;
-    position: relative;
-    left: 0;
+  img {    
     width: 100%;
-    z-index: 1022;
-    background: #fff;
-  }  
+   
+    }
+  ngb-carousel {
+    background-color: black;
+  }
 
-  .container {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+  .jumbotron{
+      background-image: url("../../assets/imagenes/playa.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+     
   }
-  .container:before, .container:after {
-    content: " ";
-    display: table;
-  }
-  .container:after {
-    clear: both;
-  }
-  @media (min-width: 768px) {
-    .container {
-      width: 750px;
-    }
-  }
-  @media (min-width: 992px) {
-    .container {
-      width: 970px;
-    }
-  }
-  @media (min-width: 1200px) {
-    .container {
-      width: 1170px;
-    }
-  }
-  
-  .container-fluid {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  .container-fluid:before, .container-fluid:after {
-    content: " ";
-    display: table;
-  }
-  .container-fluid:after {
-    clear: both;
-  }
-  .nav-header {
-    position: relative;
-    float: left;
-    width: 100%;
-  }  
