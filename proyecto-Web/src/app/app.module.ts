@@ -12,7 +12,7 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { TransporteComponent } from './transporte/transporte.component';
 import { PedidosComponent } from './pedidos/pedidos.component';
 import { CompraComponent } from './compra/compra.component';
-
+import {StepsModule} from 'primeng/steps';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,8 @@ import { CompraComponent } from './compra/compra.component';
   imports: [
     BrowserModule,
     NgbModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StepsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
