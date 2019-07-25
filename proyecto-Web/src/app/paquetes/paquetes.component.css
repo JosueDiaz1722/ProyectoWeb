@@ -1,0 +1,26 @@
+.jumbotron{
+    background-image: url("../../assets/imagenes/Principal_Paquetes.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+   
+}
+
+.col-6{
+    background-color: darkgrey;
+    border-left:solid 4px white;
+    width: 800%;
+    
+}
+.color-fondo{
+    background-color: #F2F2F2;
+}
+.color-precios{
+    background-color: #E6E6E6;
+}
+.color-decrip{
+    background-color: white;
+}
+.color-light{
+    text-decoration-style: #57b3f1;
+}
