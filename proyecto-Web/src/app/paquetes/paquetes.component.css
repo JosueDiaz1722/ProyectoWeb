@@ -24,3 +24,8 @@
 .color-light{
     text-decoration-style: #57b3f1;
 }
+
+.backmenu{
+    background: rgba(255,255,255,0.8);
+    align-content: center;
+}
