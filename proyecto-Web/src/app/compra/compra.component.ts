@@ -4,7 +4,10 @@ import {MenuItem} from 'primeng/api';
 @Component({
   selector: 'app-compra',
   templateUrl: './compra.component.html',
-  styles:[`
+  styleUrls: ['./compra.component.css'],
+  styles:[
+        './compra.component.css',
+        `
         .ui-steps .ui-steps-item {
             width: 25%;
         }
@@ -34,21 +37,25 @@ import {MenuItem} from 'primeng/api';
     `],
     encapsulation: ViewEncapsulation.None
 })
+
+
+
 export class CompraComponent implements OnInit {
 
   items: MenuItem[];
 
-    activeIndex: number = 1;
+    activeIndex: number = 0;
     paso1=true;
     paso2=false;
     paso3=false;
-    paso4=false;
+    lista= [{nombre:'Auto1',marca:"Marca1"},{nombre:'Auto2',marca:"Marca2"},{nombre:'Auto3',marca:"Marca3"}];
+    lista2= [{imagen:'../../assets/imagenes/Rectangle 532.png',descripcion:"Auto1",numero:"3",precio:"10"},{imagen:'../../assets/imagenes/Rectangle 532.png',descripcion:"Auto1",numero:"3",precio:"10"},{imagen:'../../assets/imagenes/Rectangle 532.png',descripcion:"Auto1",numero:"3",precio:"10"}];
 
     constructor() {}
 
     ngOnInit() {
         this.items = [{
-                label: 'Personal',
+                label: 'Compra',
                 command: (event: any) => {
                     this.activeIndex = 0;
                     this.desactivarPasos();
@@ -57,7 +64,7 @@ export class CompraComponent implements OnInit {
                 }
             },
             {
-                label: 'Seat',
+                label: 'Pago',
                 command: (event: any) => {
                     this.activeIndex = 1;
                     this.desactivarPasos();
@@ -72,14 +79,6 @@ export class CompraComponent implements OnInit {
                    this.paso3=true;
                 }
             },
-            {
-                label: 'Confirmation',
-                command: (event: any) => {
-                    this.activeIndex = 3;
-                    this.desactivarPasos();
-                    this.paso4=true;
-                }
-            }
         ];
     }
 
@@ -87,7 +86,17 @@ export class CompraComponent implements OnInit {
       this.paso1=false;
       this.paso2=false;
       this.paso3=false;
-      this.paso4=false;
     }
 
+    StepCompra() {
+        this.activeIndex = 1;
+        this.desactivarPasos();
+        this.paso2=true;
+    }
+
+    StepPayment() {
+        this.activeIndex = 2;
+        this.desactivarPasos();
+        this.paso3=true;
+    }
 }

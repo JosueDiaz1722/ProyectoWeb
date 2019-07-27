@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
-
 import { AppComponent } from './app.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ContactanosComponent } from './contactanos/contactanos.component';
@@ -30,7 +29,7 @@ import {StepsModule} from 'primeng/steps';
     BrowserModule,
     NgbModule,
     AppRoutingModule,
-    StepsModule
+    StepsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,192 @@
-<p>compra works!</p>
 <p-steps [model]="items" [(activeIndex)]="activeIndex" [readonly]="false"></p-steps>
-<p *ngIf="paso1">Paso 1</p>
-<p *ngIf="paso2">Paso 2</p>
+
+<html *ngIf="paso1">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Pago</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body style="background-color: rgba(241, 241, 241, 0.877)">
+      <form class="text-left border border-light p-4">
+        <div class="jumbotron card card-image" style="background-image: url(../../assets/imagenes/dfasas.png);background-repeat:no-repeat;background-size: cover;">
+        </div>
+        <div style="background-color: white">
+            <form class="text-left border border-light p-5">
+              <h1 class="text-right" style="color:rgb(4, 4, 63)"><b>PEDIDO</b></h1>
+              <h2 class="text-left" style="color:rgb(4, 4, 63)"><b>TU COMPRA</b></h2>
+            </form>
+          <form class="text-left border border-light p-5">
+            <ng-template ngFor let-item [ngForOf]="lista2" let-i="index" [ngForTrackBy]="trackByFn">
+              
+                <div class="row">
+                  <div class="col-lg-4">
+                      <img src={{item.imagen}} width="70%" height="90%"/>
+                  </div>
+                  <div class="col-lg-4">
+                      {{item.descripcion}}
+                  </div>
+                  <div class="col-lg-2">
+                      {{item.numero}}
+                  </div>
+                  <div class="col-lg-1">
+                     <p style="border: ridge #82828a 1px; text-align: center">{{item.precio}}</p>
+                  </div>
+                  <div class="col-lg-1">
+                      <button style="width: 60px; margin: 0 auto;" type="button" mdbBtn color="primary" mdbWavesEffect >X</button>
+                  </div>
+                </div>
+              
+              <br/>
+              <hr class="new1"/>
+            </ng-template>
+            <button (click)="StepCompra()" class="boton">Hacer pedido/actualizar</button>
+            <h4 style="text-align: right"> <b>  $25.00</b></h4>
+          </form>
+          </div>
+      </form>
+    </body>
+</html> 
+
+
+
+<html *ngIf="paso2" lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Pago</title>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        </head>
+  <body style="background-color: rgba(241, 241, 241, 0.877)">
+      <form class="text-left border border-light p-4">
+        <div class="jumbotron card card-image" style="background-image: url(../../assets/imagenes/mapa.png);background-repeat:no-repeat;background-size: cover;">
+        </div> 
+      </form>
+    <form class="text-left border border-light p-4">
+  <div style="background-color: white">
+    <form class="text-left border border-light p-5">
+        <h1 class="text-right" style="color:rgb(4, 4, 63)"><b>PAGO</b></h1>
+      <br/>
+      <br/>
+      <div class="row">
+          <div class="col-lg-4">
+            <h4><b>1 Shipping Address</b></h4>
+            <h6>All fields required unless label optional</h6>
+
+            <form class="text-left border border-light p-2">
+              <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+              <h6>Required to send you an confirmation of your purchase</h6>
+              <!--input type="text" id="country" class="form-control mb-4" placeholder="Country"-->
+              <select class="browser-default custom-select">
+                  <option selected>Country</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+              </select>
+              <br/>
+              <br/>
+              <input type="text" id="fullName" class="form-control mb-4" placeholder="Full Name">
+              <input type="text" id="address" class="form-control mb-4" placeholder="Address">
+              <input type="text" id="address" class="form-control mb-4" placeholder="Address">
+              <input type="text" id="city" class="form-control mb-4" placeholder="City/Town">
+              <input type="text" id="state" class="form-control mb-4" placeholder="State">
+              <input type="text" id="zip" class="form-control mb-4" placeholder="Zip">
+            </form>
+          </div>
+          
+          <div class="container"  class="col-lg-4">
+            <div>
+                <h4><b>2 Shipping & Payment</b></h4>
+                <h6>Secure Credit Card Information</h6>
+
+                <form class="text-left border border-light p-2" style="background-color: rgba(241, 241, 241, 0.877)">
+                  <div class="form-row">
+                      <div class="col-lg-10">
+                          <input type="text" id="creditCardNumber" class="form-control mb-4" placeholder="Credit Card Number">
+                      </div>
+                      <div class="col-lg-1">
+                          <img src='../../assets/imagenes/tarjeta2.png'  width="40" height="35"/>
+                      </div>
+                      <div class="col-lg-1">
+                          <img src='../../assets/imagenes/tarjeta2.png'  width="40" height="35"/>
+                      </div>
+                  </div>
+                  <h6>Expiration Date</h6>
+                  <div class="form-row">
+                      <div class="col-lg-5">
+                          <input type="date" id="inicio" class="form-control mb-6">
+                      </div>
+                      <div class="col-lg-1">
+                          <h3>/</h3>
+                      </div>
+                      <div class="col-lg-5">
+                          <input type="date" id="fin" class="form-control mb-6">
+                      </div>
+                  </div>
+                  <br/>
+                  <div class="form-row">
+                      <div class="col-lg-8">
+                          <input type="text" id="SecurityCode" class="form-control mb-4" placeholder="Security Code">
+                      </div>
+                      <div class="col-lg-1">
+                          <img src='../../assets/imagenes/tarjeta2.png'  width="40" height="35"/>
+                      </div>
+                  </div>
+                </form>
+
+            </div>
+            <div>
+                <h6><b>Billing Address</b></h6>
+                <form class="text-left border border-light p-2">
+                  <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+                  <h6>Required to send you an confirmation of your purchase</h6>
+                  <select class="browser-default custom-select">
+                      <option selected>Country</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                  </select>
+                  <br/>
+                  <br/>
+                  
+                </form>
+            </div>
+         </div>
+
+          <div class="col-lg-4">
+            <h4><b>3 Order & Summery</b></h4>
+            <h6>All fields required unless label optional</h6>
+            <form class="text-left border border-light p-2">
+              <h6>Gift Card & Promotional Codes</h6>
+              <input type="text" id="giftCard" class="form-control mb-4">
+              <h6>Create an Account</h6>
+              <p class="text-justify">Woul you like to save your information for future use?
+                Just enter a passwors and we will store it for you
+              </p>
+              <input type="password" id="password" class="form-control mb-4">
+              <h6>Order Summary</h6>
+              <p>Item: $00.00
+              <p> Shipping & Handling: $00.00</p>
+              <p> Total Before Tax: $00.00</p>
+              <p> Estimate Tax to be collected: ?</p>
+              <br/>
+              <hr/>
+              <h4><b>TOTAL</b></h4>
+              <h3><b>$25.00</b></h3>
+              <button (click)="StepPayment()" class="boton1" type="button" mdbBtn color="primary" mdbWavesEffect >Place Order</button>
+          </form>
+          </div>
+    </div>
+  </form>
+  </div>
+</form>
+  </body>
+</html>
+
+
+
 <p *ngIf="paso3">Paso 3</p>
-<p *ngIf="paso4">Paso 4</p>
+
+

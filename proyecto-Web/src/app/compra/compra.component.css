@@ -1,0 +1,24 @@
+.jumbotron{
+    background-image: url("../../assets/imagenes/mapa.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.boton{
+    background-color:rgb(10, 34, 51);
+    width: 220px;
+    color: aliceblue;
+    float: right;
+}
+
+.boton1{
+    background-color:rgb(10, 34, 51);
+    width: 220px;
+    color: aliceblue;
+    float: left;
+}
+
+hr.new1{
+    border: 1px solid black;
+ 
+}
