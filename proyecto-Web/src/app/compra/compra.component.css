@@ -9,13 +9,23 @@
     width: 220px;
     color: aliceblue;
     float: right;
+    border-color: rgb(10, 34, 51)
 }
 
 .boton1{
     background-color:rgb(10, 34, 51);
     width: 220px;
+    height: 45px;
     color: aliceblue;
     float: left;
+    border-color: rgb(10, 34, 51)
+}
+
+.boton2{
+    border-color: transparent;
+    background-color: transparent;
+    width: 60px; 
+    margin: 0 auto;
 }
 
 hr.new1{

@@ -49,7 +49,7 @@ export class CompraComponent implements OnInit {
     paso2=false;
     paso3=false;
     lista= [{nombre:'Auto1',marca:"Marca1"},{nombre:'Auto2',marca:"Marca2"},{nombre:'Auto3',marca:"Marca3"}];
-    lista2= [{imagen:'../../assets/imagenes/Rectangle 532.png',descripcion:"Auto1",numero:"3",precio:"10"},{imagen:'../../assets/imagenes/Rectangle 532.png',descripcion:"Auto1",numero:"3",precio:"10"},{imagen:'../../assets/imagenes/Rectangle 532.png',descripcion:"Auto1",numero:"3",precio:"10"}];
+    lista2= [{imagen:'../../assets/imagenes/Rectangle 532.png',descripcion:"Auto1",numero:"3",precio:"$ 10"},{imagen:'../../assets/imagenes/Rectangle 532.png',descripcion:"Auto1",numero:"3",precio:"$ 10"},{imagen:'../../assets/imagenes/Rectangle 532.png',descripcion:"Auto1",numero:"3",precio:"$ 10"}];
 
     constructor() {}
 
@@ -72,7 +72,7 @@ export class CompraComponent implements OnInit {
                 }
             },
             {
-                label: 'Payment',
+                label: 'Realizar Pedido',
                 command: (event: any) => {
                     this.activeIndex = 2;
                     this.desactivarPasos();

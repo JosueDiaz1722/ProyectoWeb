@@ -16,25 +16,25 @@
             <form class="text-left border border-light p-5">
               <h1 class="text-right" style="color:rgb(4, 4, 63)"><b>PEDIDO</b></h1>
               <h2 class="text-left" style="color:rgb(4, 4, 63)"><b>TU COMPRA</b></h2>
-            </form>
+           
           <form class="text-left border border-light p-5">
             <ng-template ngFor let-item [ngForOf]="lista2" let-i="index" [ngForTrackBy]="trackByFn">
               
                 <div class="row">
-                  <div class="col-lg-4">
-                      <img src={{item.imagen}} width="70%" height="90%"/>
+                  <div class="col-lg-4 text-center">
+                      <img src={{item.imagen}} width="55%" height="80%"/>
                   </div>
                   <div class="col-lg-4">
                       {{item.descripcion}}
                   </div>
-                  <div class="col-lg-2">
-                      {{item.numero}}
-                  </div>
                   <div class="col-lg-1">
-                     <p style="border: ridge #82828a 1px; text-align: center">{{item.precio}}</p>
+                    <p style="border: ridge #82828a 1px; text-align: center">{{item.numero}}</p>
                   </div>
-                  <div class="col-lg-1">
-                      <button style="width: 60px; margin: 0 auto;" type="button" mdbBtn color="primary" mdbWavesEffect >X</button>
+                  <div class="col-lg-2 text-center">
+                     {{item.precio}}
+                  </div>
+                  <div class="col-lg-1; col text-center">
+                    <button class="boton2"><h4>X</h4></button>
                   </div>
                 </div>
               
@@ -42,8 +42,9 @@
               <hr class="new1"/>
             </ng-template>
             <button (click)="StepCompra()" class="boton">Hacer pedido/actualizar</button>
-            <h4 style="text-align: right"> <b>  $25.00</b></h4>
+            <h4 style="text-align: right"><b> $25.00 &nbsp; &nbsp;&nbsp;</b></h4>
           </form>
+        </form>
           </div>
       </form>
     </body>
@@ -58,7 +59,8 @@
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
             <title>Pago</title>
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        </head>
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+          </head>
   <body style="background-color: rgba(241, 241, 241, 0.877)">
       <form class="text-left border border-light p-4">
         <div class="jumbotron card card-image" style="background-image: url(../../assets/imagenes/mapa.png);background-repeat:no-repeat;background-size: cover;">
@@ -78,7 +80,6 @@
             <form class="text-left border border-light p-2">
               <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
               <h6>Required to send you an confirmation of your purchase</h6>
-              <!--input type="text" id="country" class="form-control mb-4" placeholder="Country"-->
               <select class="browser-default custom-select">
                   <option selected>Country</option>
                   <option value="1">One</option>
@@ -107,10 +108,14 @@
                           <input type="text" id="creditCardNumber" class="form-control mb-4" placeholder="Credit Card Number">
                       </div>
                       <div class="col-lg-1">
-                          <img src='../../assets/imagenes/tarjeta2.png'  width="40" height="35"/>
+                        <svg style="width:40px;height:40px" viewBox="0 0 24 24">
+                          <path fill="#000000" d="M20,8H4V6H20M20,18H4V12H20M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
+                        </svg>
                       </div>
                       <div class="col-lg-1">
-                          <img src='../../assets/imagenes/tarjeta2.png'  width="40" height="35"/>
+                        <svg style="widows: 40px;height:40px" viewBox="0 0 24 24">
+                          <path fill="#000000" d="M20,8H4V6H20M20,18H4V12H20M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
+                        </svg>
                       </div>
                   </div>
                   <h6>Expiration Date</h6>
@@ -131,7 +136,9 @@
                           <input type="text" id="SecurityCode" class="form-control mb-4" placeholder="Security Code">
                       </div>
                       <div class="col-lg-1">
-                          <img src='../../assets/imagenes/tarjeta2.png'  width="40" height="35"/>
+                        <svg style="widows: 40px;;height:40px" viewBox="0 0 24 24">
+                          <path fill="#000000" d="M20,8H4V6H20M20,18H4V12H20M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
+                        </svg>
                       </div>
                   </div>
                 </form>
@@ -187,6 +194,52 @@
 
 
 
-<p *ngIf="paso3">Paso 3</p>
-
-
+<html *ngIf="paso3">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Confirmacion</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body style="background-color: rgba(241, 241, 241, 0.877)">
+      <form class="text-left border border-light p-4">
+        <div class="jumbotron card card-image" style="background-image: url(../../assets/imagenes/Rectangle401.png);background-repeat:no-repeat;background-size: cover;">
+        </div>
+        <div style="background-color: white">
+            <form class="text-left border border-light p-5">
+              <h1 class="text-right" style="color:rgb(4, 4, 63)"><b>CONFIRMACIÓN DE PEDIDO</b></h1>
+              <h2 class="text-left" style="color:rgb(4, 4, 63)"><b>TU COMPRA</b></h2>
+              <h5>Gracias por su compra. Por favor, disfruta tu viaje!</h5>
+              <h5>Hemos enviado un correo electrónico de confirmación</h5>
+            
+          <form class="text-left border border-light p-5">
+            <ng-template ngFor let-item [ngForOf]="lista2" let-i="index" [ngForTrackBy]="trackByFn">
+              
+                <div class="row">
+                  <div class="col-lg-4 text-center">
+                    <img src={{item.imagen}} width="55%" height="80%"/>
+                  </div>
+                  <div class="col-lg-4">
+                      {{item.descripcion}}
+                  </div>
+                  <div class="col-lg-1">
+                    <p style="border: ridge #82828a 1px; text-align: center"> {{item.numero}}</p>
+                  </div>
+                  <div class="col-lg-2 text-center">
+                     {{item.precio}}
+                  </div>
+                  <div class="col-lg-1; col text-center">
+                    <button class="boton2"><h4>X</h4></button>
+                  </div>
+                </div>
+              <br/>
+              <hr class="new1"/>
+            </ng-template>
+            <h4 style="text-align: right"> <b>  $25.00</b></h4>
+          </form>
+        </form>
+          </div>
+      </form>
+    </body>
+</html> 
