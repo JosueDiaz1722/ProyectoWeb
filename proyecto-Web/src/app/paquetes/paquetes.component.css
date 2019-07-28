@@ -53,8 +53,11 @@
     margin: 0 auto;
     text-align: center;
 }
-
-.hijo {
-	display: table-cell;
-	vertical-align: middle;
+CSS
+.abs-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
+
