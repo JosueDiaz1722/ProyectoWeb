@@ -1,0 +1,33 @@
+.footer{
+    background-color: #023B59;
+    color: white;
+}
+
+.font-weight-bold{
+    color: white
+}
+
+.font-weight-bold{
+    color: white
+}
+p{
+    color: white
+}
+
+.mb-1{
+    color: white
+}
+
+.footer-copyright{
+    color: white
+}
+
+.fa {
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }

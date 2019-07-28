@@ -25,22 +25,253 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/node_modules/angular-material/angular-material.css">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Inicio</title>
 </head>
 <body>
-		<div class="jumbotron card card-image">
-			<div class="text-white text-center py-5 px-4">
-			  <div>
-				<h2 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Create your beautiful website with MDBootstrap</strong></h2>
-				<p class="mx-5 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
-				  optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos. Odit sed qui, dolorum!
-				</p>
-				<a class="btn btn-primary btn-md"><i class="fas fa-clone left"></i> View project</a>
-			  </div>
-			</div>
-		  </div>
+    <div class="jumbotron card card-image">
+        <div class="backmenu col-xs-4 col-md-7 col-lg-4">
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Vuelos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Hoteles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Paquetes</a>
+                </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <div class="row">
+                            <form>
+                                    
+                                    <div class="form-row">
+                                      <!-- Default input -->
+                                      <div class="form-group col-md-6">
+                                        <label for="inputEmail4">Origen:</label>
+                                        <input type="text" class="form-control" id="inputCity" placeholder="Quito">
+                                      </div>
+                                      <!-- Default input -->
+                                      <div class="form-group col-md-6">
+                                        <label for="inputPassword4">Destino:</label>
+                                        <input type="Text" class="form-control" id="inputCity" placeholder="New York">
+                                      </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="partida">Partida</label>
+                                            <input type="date" class="form-control" id="partida" placeholder="">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="regreso">Regreso</label>
+                                            <input type="date" class="form-control" id="llegada" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <label>Clase</label>
+                                       <select class="browser-default custom-select ">
+                                            <option value="1" selected>Economica</option>
+                                            <option value="2">Premium Economy</option>
+                                            <option value="3">Ejecutiva/Business</option>
+                                            <option value="4">Primera clase</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-row">
+                                      <div class="form-group col-md-6">
+                                        <label for="Adultos">Adultos</label>
+                                        <br>
+                                        <input id="Adultos" style="display:table-cell; width:100%" type="number" value="1" min="1" max="100" step="1"/>
+                                        
+                                      </div>
+                                      <!-- Default input -->
+                                      <div class="form-group col-md-6">
+                                        <label for="Menores">Menores</label>
+                                        <input id="Menores" style="display:table-cell; width:100%" type="number" value="0" min="0" max="100" step="1"/>
+                                      </div>
+                                    </div>
+                                    <!-- Grid row -->
+                                    <button type="submit" class="btn btn-primary btn-md">Sign in</button>
+                                  </form>
+                                
+                    </div>    
+                </div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
+                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+            </div>
+        </div>
+    </div>
+    <!--Carousel Wrapper-->
+    <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
 
+            <!--Controls-->
+            <div class="controls-top" >
+              <a class="btn" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+              <a class="btn" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+            </div>
+            <!--/.Controls-->
+      
+            <!--Indicators-->
+            <ol class="carousel-indicators">
+              <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+              <li data-target="#multi-item-example" data-slide-to="1"></li>
+              <li data-target="#multi-item-example" data-slide-to="2"></li>
+            </ol>
+            <!--/.Indicators-->
+      
+            <!--Slides-->
+            <div class="carousel-inner" role="listbox">
+      
+              <!--First slide-->
+              <div class="carousel-item active">
+      
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="card mb-2">
+                      <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+                        alt="Card image cap">
+                      <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                          card's content.</p>
+                        <a class="btn btn-primary">Button</a>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="col-md-4 clearfix d-none d-md-block">
+                    <div class="card mb-2">
+                      <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
+                        alt="Card image cap">
+                      <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                          card's content.</p>
+                        <a class="btn btn-primary">Button</a>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="col-md-4 clearfix d-none d-md-block">
+                    <div class="card mb-2">
+                      <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
+                        alt="Card image cap">
+                      <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                          card's content.</p>
+                        <a class="btn btn-primary">Button</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+      
+              </div>
+              <!--/.First slide-->
+      
+              <!--Second slide-->
+              <div class="carousel-item">
+      
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="card mb-2">
+                      <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
+                        alt="Card image cap">
+                      <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                          card's content.</p>
+                        <a class="btn btn-primary">Button</a>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="col-md-4 clearfix d-none d-md-block">
+                    <div class="card mb-2">
+                      <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg"
+                        alt="Card image cap">
+                      <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                          card's content.</p>
+                        <a class="btn btn-primary">Button</a>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="col-md-4 clearfix d-none d-md-block">
+                    <div class="card mb-2">
+                      <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"
+                        alt="Card image cap">
+                      <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                          card's content.</p>
+                        <a class="btn btn-primary">Button</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+      
+              </div>
+              <!--/.Second slide-->
+      
+              <!--Third slide-->
+              <div class="carousel-item">
+      
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="card mb-2">
+                      <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(53).jpg"
+                        alt="Card image cap">
+                      <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                          card's content.</p>
+                        <a class="btn btn-primary">Button</a>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="col-md-4 clearfix d-none d-md-block">
+                    <div class="card mb-2">
+                      <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(45).jpg"
+                        alt="Card image cap">
+                      <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                          card's content.</p>
+                        <a class="btn btn-primary">Button</a>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="col-md-4 clearfix d-none d-md-block">
+                    <div class="card mb-2">
+                      <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(51).jpg"
+                        alt="Card image cap">
+                      <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                          card's content.</p>
+                        <a class="btn btn-primary">Button</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+      
+              </div>
+              <!--/.Third slide-->
+      
+            </div>
+            <!--/.Slides-->
+      
+          </div>
+          <!--/.Carousel Wrapper--> 
+
+         
 </body>
-</html>
+</html>      

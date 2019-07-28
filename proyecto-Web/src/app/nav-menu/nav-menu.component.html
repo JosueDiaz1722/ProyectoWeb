@@ -1,7 +1,10 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 <nav class="navbar navbar-expand-lg  navbar-dark" style="background-color: #023B59">
-    <a class="navbar-brand" routerLink="">Navbar</a>
+    <a class="navbar-brand" routerLink="">
+        <img src="https://cdn0.iconfinder.com/data/icons/commerce-and-retail/512/airplane_plane_fly_aircraft_air_ship_jet_delivery_transportation_travel_flight_shipping_fast_transport_speed_tourism_flat_design_icon-512.png" height="30" alt="">
+        ALLIN1
+    </a>
     <button class="navbar-toggler" type="button"
             (click)="toggleNavbar()">
       <span class="navbar-toggler-icon"></span>
@@ -16,17 +19,28 @@
           <a class="nav-link" routerLink="transporte">TRANSPORTE</a>
         </li>
         <li class="nav-item active">
-            <a class="nav-link" routerLink="pedidos">PEDIDOS</a>
-        </li>
-        <li class="nav-item active">
             <a class="nav-link" routerLink="compra">COMPRA</a>
         </li>
-    
         
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <ul class="navbar-nav ml-auto nav-flex-icons">
+          <li class="nav-item">
+            <a class="nav-link">
+              <div class="btn-group" mdbDropdown>
+                  
+                <i class="fa fa-user" mdbDropdownToggle></i>
+                <div class="dropdown-menu dropdown-menu-right dropdown-primary">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                  <div class="divider dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Separated link</a>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
       </form>
     </div>
   </nav>

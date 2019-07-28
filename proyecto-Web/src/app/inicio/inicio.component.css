@@ -47,9 +47,7 @@ input.btn{
     width: 100%;
    
     }
-  ngb-carousel {
-    background-color: black;
-  }
+
 
   .jumbotron{
       background-image: url("../../assets/imagenes/playa.png");
@@ -57,3 +55,17 @@ input.btn{
       background-size: cover;
      
   }
+
+  .backmenu{
+    background: rgba(255,255,255,0.8);
+  }
+
+  form {
+   
+    margin: auto ;
+  }
+  
+  .controls-top {
+    text-align:center;
+  }
+      
