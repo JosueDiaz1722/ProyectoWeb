@@ -1,1 +1,293 @@
-<p>compra works!</p>
+<p-steps [model]="items" [(activeIndex)]="activeIndex" [readonly]="false"></p-steps>
+
+<html *ngIf="paso1">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Pago</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body style="background-color: rgba(241, 241, 241, 0.877)">
+      <form class="text-left border border-light p-4">
+        <div class="jumbotron card card-image" style="background-image: url(../../assets/imagenes/dfasas.png);background-repeat:no-repeat;background-size: cover;">
+        </div>
+        <div style="background-color: white">
+            <form class="text-left border border-light p-5">
+              <h1 class="text-right" style="color:rgb(4, 4, 63)"><b>PEDIDO</b></h1>
+              <h2 class="text-left" style="color:rgb(4, 4, 63)"><b>TU COMPRA</b></h2>
+           
+          <form class="text-left border border-light p-5">
+            <ng-template ngFor let-item [ngForOf]="lista2" let-i="index" [ngForTrackBy]="trackByFn">
+              
+                <div class="row">
+                  <div class="col-lg-4 text-center">
+                      <img src={{item.imagen}} width="55%" height="80%"/>
+                  </div>
+                  <div class="col-lg-4">
+                      {{item.descripcion}}
+                  </div>
+                  <div class="col-lg-1">
+                    <p style="border: ridge #82828a 1px; text-align: center">{{item.numero}}</p>
+                  </div>
+                  <div class="col-lg-2 text-center">
+                     {{item.precio}}
+                  </div>
+                  <div class="col-lg-1; col text-center">
+                    <button class="boton2"><h4>X</h4></button>
+                  </div>
+                </div>
+              
+              <br/>
+              <hr class="new1"/>
+            </ng-template>
+            <button (click)="StepCompra()" class="boton">Hacer pedido/actualizar</button>
+            <h4 style="text-align: right"><b> $25.00 &nbsp; &nbsp;&nbsp;</b></h4>
+          </form>
+        </form>
+          </div>
+      </form>
+    </body>
+</html> 
+
+
+
+<html *ngIf="paso2" lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Pago</title>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+          </head>
+  <body style="background-color: rgba(241, 241, 241, 0.877)">
+      <form class="text-left border border-light p-4">
+        <div class="jumbotron card card-image" style="background-image: url(../../assets/imagenes/mapa.png);background-repeat:no-repeat;background-size: cover;">
+        </div> 
+      
+  <div style="background-color: white">
+    <form class="text-left border border-light p-5">
+        <h1 class="text-right" style="color:rgb(4, 4, 63)"><b>PAGO</b></h1>
+      <br/>
+      <br/>
+      <div class="row">
+          <div class="col-lg-4">
+            <h4><b>1 Shipping Address</b></h4>
+            <h6>All fields required unless label optional</h6>
+
+            <form class="text-left border border-light p-2">
+              <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+              <h6>Required to send you an confirmation of your purchase</h6>
+              <select class="browser-default custom-select">
+                  <option selected>Country</option>
+                  <option value="1">Alemania</option>
+                  <option value="2">Angola</option>
+                  <option value="3">Arabia Saudita</option>
+                  <option value="4">Argentina</option>
+                  <option value="5">Australia</option>
+                  <option value="6">Bélgica Saudita</option>
+                  <option value="7">Bolivia</option>
+                  <option value="8">Brasil</option>
+                  <option value="9">Canadá</option>
+                  <option value="10">Chile</option>
+                  <option value="11">China</option>
+                  <option value="12">Colombia</option>
+                  <option value="13">Corea del Norte</option>
+                  <option value="14">Corea del Sur</option>
+                  <option value="15">Costa Rica</option>
+                  <option value="16">Ecuador</option>
+                  <option value="17">El Salvador</option>
+                  <option value="18">España</option>
+                  <option value="19">Canadá</option>
+                  <option value="20">Francia</option>
+                  <option value="21">Grecia</option>
+                  <option value="22">Honduras</option>
+                  <option value="23">Italia</option>
+                  <option value="24">México</option>
+                  <option value="25">Panamá</option>
+              </select>
+              <br/>
+              <br/>
+              <input type="text" id="fullName" class="form-control mb-4" placeholder="Full Name">
+              <input type="text" id="address" class="form-control mb-4" placeholder="Address">
+              <input type="text" id="address" class="form-control mb-4" placeholder="Address">
+              <input type="text" id="city" class="form-control mb-4" placeholder="City/Town">
+              <input type="text" id="state" class="form-control mb-4" placeholder="State">
+              <input type="text" id="zip" class="form-control mb-4" placeholder="Zip">
+            </form>
+          </div>
+          
+          <div class="container"  class="col-lg-4">
+            <div>
+                <h4><b>2 Shipping & Payment</b></h4>
+                <h6>Secure Credit Card Information</h6>
+
+                <form class="text-left border border-light p-2" style="background-color: rgba(241, 241, 241, 0.877)">
+                  <div class="form-row">
+                      <div class="col-lg-10">
+                          <input type="text" id="creditCardNumber" class="form-control mb-4" placeholder="Credit Card Number">
+                      </div>
+                      <div class="col-lg-1">
+                        <svg style="width:40px;height:40px" viewBox="0 0 24 24">
+                          <path fill="#000000" d="M20,8H4V6H20M20,18H4V12H20M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
+                        </svg>
+                      </div>
+                      <div class="col-lg-1">
+                        <svg style="widows: 40px;height:40px" viewBox="0 0 24 24">
+                          <path fill="#000000" d="M20,8H4V6H20M20,18H4V12H20M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
+                        </svg>
+                      </div>
+                  </div>
+                  <h6>Expiration Date</h6>
+                  <div class="form-row">
+                      <div class="col-lg-5">
+                          <input type="date" id="inicio" class="form-control mb-6">
+                      </div>
+                      <div class="col-lg-1">
+                          <h3>/</h3>
+                      </div>
+                      <div class="col-lg-5">
+                          <input type="date" id="fin" class="form-control mb-6">
+                      </div>
+                  </div>
+                  <br/>
+                  <div class="form-row">
+                      <div class="col-lg-8">
+                          <input type="text" id="SecurityCode" class="form-control mb-4" placeholder="Security Code">
+                      </div>
+                      <div class="col-lg-1">
+                        <svg style="widows: 40px;;height:40px" viewBox="0 0 24 24">
+                          <path fill="#000000" d="M20,8H4V6H20M20,18H4V12H20M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
+                        </svg>
+                      </div>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                    <label class="custom-control-label" for="defaultUnchecked">&nbsp; &nbsp;&nbsp;&nbsp;Billing address is the same as shopping address<br/>&nbsp; &nbsp;&nbsp;&nbsp;If unchecked show billing address from</label>
+                </div>
+                </form>
+
+            </div>
+            <div>
+                <h6><b>Billing Address</b></h6>
+                <form class="text-left border border-light p-2">
+                  <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+                  <h6>Required to send you an confirmation of your purchase</h6>
+                  <select class="browser-default custom-select">
+                      <option selected>Country</option>
+                      <option selected>Country</option>
+                  <option value="1">Alemania</option>
+                  <option value="2">Angola</option>
+                  <option value="3">Arabia Saudita</option>
+                  <option value="4">Argentina</option>
+                  <option value="5">Australia</option>
+                  <option value="6">Bélgica Saudita</option>
+                  <option value="7">Bolivia</option>
+                  <option value="8">Brasil</option>
+                  <option value="9">Canadá</option>
+                  <option value="10">Chile</option>
+                  <option value="11">China</option>
+                  <option value="12">Colombia</option>
+                  <option value="13">Corea del Norte</option>
+                  <option value="14">Corea del Sur</option>
+                  <option value="15">Costa Rica</option>
+                  <option value="16">Ecuador</option>
+                  <option value="17">El Salvador</option>
+                  <option value="18">España</option>
+                  <option value="19">Canadá</option>
+                  <option value="20">Francia</option>
+                  <option value="21">Grecia</option>
+                  <option value="22">Honduras</option>
+                  <option value="23">Italia</option>
+                  <option value="24">México</option>
+                  <option value="25">Panamá</option>
+                  </select>
+                  <br/>
+                  <br/>
+                  
+                </form>
+            </div>
+         </div>
+
+          <div class="col-lg-4">
+            <h4><b>3 Order & Summery</b></h4>
+            <h6>All fields required unless label optional</h6>
+            <form class="text-left border border-light p-2">
+              <h6>Gift Card & Promotional Codes</h6>
+              <input type="text" id="giftCard" class="form-control mb-4">
+              <h6>Create an Account</h6>
+              <p class="text-justify">Woul you like to save your information for future use?
+                Just enter a passwors and we will store it for you
+              </p>
+              <input type="password" id="password" class="form-control mb-4">
+              <h6>Order Summary</h6>
+              <p>Item: $00.00
+              <p> Shipping & Handling: $00.00</p>
+              <p> Total Before Tax: $00.00</p>
+              <p> Estimate Tax to be collected: ?</p>
+              <br/>
+              <hr/>
+              <h4><b>TOTAL</b></h4>
+              <h3><b>$25.00</b></h3>
+              <button (click)="StepPayment()" class="boton1" type="button" mdbBtn color="primary" mdbWavesEffect >Place Order</button>
+          </form>
+          </div>
+    </div>
+  </form>
+  </div>
+</form>
+  </body>
+</html>
+
+
+
+<html *ngIf="paso3">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Confirmacion</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body style="background-color: rgba(241, 241, 241, 0.877)">
+      <form class="text-left border border-light p-4">
+        <div class="jumbotron card card-image" style="background-image: url(../../assets/imagenes/Rectangle401.png);background-repeat:no-repeat;background-size: cover;">
+        </div>
+        <div style="background-color: white">
+            <form class="text-left border border-light p-5">
+              <h1 class="text-right" style="color:rgb(4, 4, 63)"><b>CONFIRMACIÓN DE PEDIDO</b></h1>
+              <h2 class="text-left" style="color:rgb(4, 4, 63)"><b>TU COMPRA</b></h2>
+              <h5>Gracias por su compra. Por favor, disfruta tu viaje!</h5>
+              <h5>Hemos enviado un correo electrónico de confirmación</h5>
+            
+          <form class="text-left border border-light p-5">
+            <ng-template ngFor let-item [ngForOf]="lista2" let-i="index" [ngForTrackBy]="trackByFn">
+              
+                <div class="row">
+                  <div class="col-lg-4 text-center">
+                    <img src={{item.imagen}} width="55%" height="80%"/>
+                  </div>
+                  <div class="col-lg-4">
+                      {{item.descripcion}}
+                  </div>
+                  <div class="col-lg-1">
+                    <p style="border: ridge #82828a 1px; text-align: center"> {{item.numero}}</p>
+                  </div>
+                  <div class="col-lg-2 text-center">
+                     {{item.precio}}
+                  </div>
+                  <div class="col-lg-1; col text-center">
+                    <button class="boton2"><h4>X</h4></button>
+                  </div>
+                </div>
+              <br/>
+              <hr class="new1"/>
+            </ng-template>
+            <h4 style="text-align: right"> <b>  $25.00</b></h4>
+          </form>
+        </form>
+          </div>
+      </form>
+    </body>
+</html> 
