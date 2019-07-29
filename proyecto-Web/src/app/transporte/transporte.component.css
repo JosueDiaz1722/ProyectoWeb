@@ -7,3 +7,19 @@
   .example-full-width {
     width: 100%;
   }
+
+  .controls-top {
+    text-align:center;
+  }
+  
+  .backmenu{
+    background: rgba(255,255,255,0.8);
+    
+  }
+
+  .jumbotron{
+    background-image: url("../../assets/imagenes/vuelo.png") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
