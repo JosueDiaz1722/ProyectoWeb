@@ -1,0 +1,78 @@
+.jumbotron{
+    background-image: url("../../assets/imagenes/Principal_Paquetes.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+   
+}
+
+.col-6{
+    background-color: darkgrey;
+    border-left:solid 4px white;
+    width: 800%;
+    
+}
+.fondo-pagina{
+    background-color: rgba(241, 241, 241, 0.877)
+}
+.color-filtros{
+    background-color: #F2F2F2;
+}
+.color-fondo{
+    background-color: #F2F2F2;
+}
+.color-precios{
+    background-color: #E6E6E6;
+}
+.color-decrip{
+    background-color: white;
+}
+.color-light{
+    text-decoration-style: #57b3f1;
+}
+
+.backmenu{
+    background: rgba(255,255,255,0.8);
+    align-content: center;
+}
+
+.borde_contenedor {
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+    border: 1px solid rgb(121, 46, 46);
+  }
+
+  .star-rating a:hover {
+    color: #f39c12; /* amarillo (seleccionado) */
+  }
+   .contenedorInterior {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+CSS
+.abs-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+
+.contenedor5 {
+margin: 10px auto;
+width: 40%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.button {
+    padding: 5px 10px;
+    height: 50px;
+    align-items: center;
+    margin: 25px;
+    }
