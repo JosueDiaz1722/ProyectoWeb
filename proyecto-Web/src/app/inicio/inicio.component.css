@@ -63,6 +63,7 @@ input.btn{
   form {
    
     margin: auto ;
+    height: 375px;
   }
   
   .controls-top {
