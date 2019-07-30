@@ -21,6 +21,11 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import {StepsModule} from 'primeng/steps';
 import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
+import {AuthService} from './servicios/auth.service'
+import { FormsModule} from '@angular/forms'
+import {AngularFireModule} from '@angular/fire'
+import {AngularFireAuthModule} from '@angular/fire/auth'
+import {environment} from '../environments/environment'
 
 
 @NgModule({
@@ -42,14 +47,16 @@ import { RegistroComponent } from './registro/registro.component';
     BrowserModule,
     NgbModule,
     AppRoutingModule,
-    
+    FormsModule,
     BrowserAnimationsModule,
     MatButtonModule, MatCheckboxModule,
     NgImageSliderModule,
     AngularFontAwesomeModule,
-    StepsModule
+    StepsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
