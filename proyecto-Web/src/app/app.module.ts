@@ -38,14 +38,13 @@ import {StepsModule} from 'primeng/steps';
     BrowserModule,
     NgbModule,
     AppRoutingModule,
-    MDBBootstrapModule.forRoot(),
+    
     BrowserAnimationsModule,
     MatButtonModule, MatCheckboxModule,
     NgImageSliderModule,
     AngularFontAwesomeModule,
     StepsModule
   ],
-  schemas: [ NO_ERRORS_SCHEMA ],
   providers: [],
   bootstrap: [AppComponent]
 })
