@@ -6,9 +6,7 @@ import {MenuItem} from 'primeng/api';
   templateUrl: './compra.component.html',
   styleUrls: ['./compra.component.css'],
   styles:[
-        './compra.component.css',
-        `
-        .ui-steps .ui-steps-item {
+    `.ui-steps .ui-steps-item {
             width: 25%;
         }
 

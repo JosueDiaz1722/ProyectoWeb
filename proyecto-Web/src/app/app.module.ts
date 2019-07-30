@@ -43,7 +43,7 @@ import {StepsModule} from 'primeng/steps';
     MatButtonModule, MatCheckboxModule,
     NgImageSliderModule,
     AngularFontAwesomeModule,
-    StepsModule,
+    StepsModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [],
