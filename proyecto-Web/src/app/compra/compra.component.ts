@@ -80,6 +80,63 @@ export class CompraComponent implements OnInit {
         ];
     }
 
+
+  employees = [
+    {'paquete': 'India', imagen: "../../assets/imagenes/auto.png", descripcion:'email@email.com', cantidad:'',precio:''},
+   { 'paquete': 'Suiza', imagen: "../../assets/imagenes/auto.png", descripcion:'email@email.com', cantidad:'',precio:''},
+   { 'paquete': 'India', imagen: "../../assets/imagenes/auto.png", descripcion:'email@email.com', cantidad:'',precio:''},
+   { 'paquete': 'India', imagen: "../../assets/imagenes/auto.png", descripcion:'email@email.com', cantidad:'',precio:''},
+   { 'paquete': 'India', imagen: "../../assets/imagenes/auto.png", descripcion:'email@email.com', cantidad:'',precio:''},
+   { 'paquete': 'India', imagen: "../../assets/imagenes/auto.png", descripcion:'email@email.com', cantidad:'',precio:''},
+
+
+  ];
+  
+  title:string = 'Angular Crud';
+  
+  msg:string = '';
+  model:any = {};
+  model2:any = {};
+  hideUpdate:boolean = true;
+
+  addEmployee():void{
+    this.employees.push(this.model);
+    this.msg = 'campo agregado';
+  }
+
+  deleteEmployee(i):void {
+    var answer = confirm('Estas seguro querer eliminarlo?');
+    if(answer) {
+      this.employees.splice(i, 1);
+      this.msg = 'campo eliminado';
+    }
+  }
+
+  myValue;
+  editEmployee(i):void {
+    this.hideUpdate = false;
+    this.model2.paquete = this.employees[i].paquete;
+    this.model2.imagen = this.employees[i].imagen;
+    this.model2.descripcion= this.employees[i].descripcion;
+    this.model2.cantidad = this.employees[i].cantidad;
+    this.model2.precio= this.employees[i].precio;
+    this.myValue = i;
+  }
+
+  updateEmployee():void {
+    let i = this.myValue;
+    for(let j = 0; j < this.employees.length; j++){
+      if(i == j) {
+        this.employees[i] = this.model2;
+        this.msg = 'campo actualizado';
+        this.model2 = {};
+      }
+    }
+  }
+
+  closeAlert():void {
+    this.msg = '';
+  }
     desactivarPasos(){
       this.paso1=false;
       this.paso2=false;

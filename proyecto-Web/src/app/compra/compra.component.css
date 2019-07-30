@@ -59,3 +59,8 @@ hr.new1{
 ::ng-deep .ui-steps.steps-custom .ui-steps-item .ui-steps-title {
     color: #555555;
 }
+
+.imagen{
+    height: 150px;
+    width: 200px;
+}
