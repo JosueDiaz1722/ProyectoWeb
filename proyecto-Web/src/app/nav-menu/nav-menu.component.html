@@ -27,17 +27,24 @@
         <ul class="navbar-nav ml-auto nav-flex-icons">
           <li class="nav-item">
             <a class="nav-link">
-              <div class="btn-group" mdbDropdown>
+
+                <form>
+
+                    <div class="btn-group">
+                        <a class="btn dropdown-toggle" data-toggle="dropdown" href="#" style="color: white">
+                            Mi Perfil&nbsp;&nbsp;&nbsp;<i class="fa fa-user"></i>
+                          <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <nav class="nav nav-pills flex-column">
+                                <a class="nav-link ml-3 my-1" href="perfil" style="color: black">Login</a>
+                                <a class="nav-link ml-3 my-1" style="color: black">Logout</a>
+                              </nav>
+                        </ul>
+                      </div>
                   
-                <i class="fa fa-user" mdbDropdownToggle></i>
-                <div class="dropdown-menu dropdown-menu-right dropdown-primary">
-                  <a class="dropdown-item" href="">Login</a>
-                  <a class="dropdown-item" href="perfil">Perfil</a>
-                  <a class="dropdown-item" href="#">Cerrar sesion</a>
-                  <div class="divider dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Separated link</a>
-                </div>
-              </div>
+                </form>
+              
             </a>
           </li>
         </ul>
