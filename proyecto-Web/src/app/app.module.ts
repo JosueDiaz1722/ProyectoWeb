@@ -19,6 +19,8 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import {StepsModule} from 'primeng/steps';
+import { LoginComponent } from './login/login.component';
+import { RegistroComponent } from './registro/registro.component';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import {StepsModule} from 'primeng/steps';
     TransporteComponent,
     PedidosComponent,
     CompraComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,

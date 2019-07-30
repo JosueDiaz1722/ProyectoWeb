@@ -6,6 +6,8 @@ import {TransporteComponent} from './transporte/transporte.component'
 import {PedidosComponent} from './pedidos/pedidos.component'
 import {CompraComponent} from './compra/compra.component'
 import {PerfilComponent} from './perfil/perfil.component'
+import { LoginComponent } from './login/login.component';
+import { RegistroComponent } from './registro/registro.component';
 
 
 const routes: Routes = [
@@ -33,6 +35,14 @@ const routes: Routes = [
   {
     path:'perfil',
     component: PerfilComponent
+  },
+  {
+    path:'login',
+    component: LoginComponent
+  },
+  {
+    path:'registro',
+    component: RegistroComponent
   }
 ];
 
