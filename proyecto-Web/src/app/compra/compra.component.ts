@@ -80,10 +80,11 @@ export class CompraComponent implements OnInit {
         ];
     }
 
+    compras = [{'paquete': 'India', imagen: "../../assets/imagenes/Rectangle 441.png", descripcion:'La India es uno de los destinos más cautivantes del mundo. Las civilizaciones y la cultura india data de tiempos inmemorables, por los que existen muchos lugares antiguos que cautivan al visitante y los hacen remontarse a los primeros años de esta civilización. La India está dividida por regiones: el norte, el sur, el este, el oeste y las regiones centrales. Cada una de estas regiones tiene lugares que descubrir, por lo que es recomendable que pases una temporada en el país para que puedas descubrirlo en todo su esplendor.', cantidad:'1',precio:'3500,00'}];
 
   employees = [
     {'paquete': 'India', imagen: "../../assets/imagenes/Rectangle 441.png", descripcion:'La India es uno de los destinos más cautivantes del mundo. Las civilizaciones y la cultura india data de tiempos inmemorables, por los que existen muchos lugares antiguos que cautivan al visitante y los hacen remontarse a los primeros años de esta civilización. La India está dividida por regiones: el norte, el sur, el este, el oeste y las regiones centrales. Cada una de estas regiones tiene lugares que descubrir, por lo que es recomendable que pases una temporada en el país para que puedas descubrirlo en todo su esplendor.', cantidad:'1',precio:'3500,00'},
-   { 'paquete': 'Suiza', imagen: "../../assets/imagenes/montania.png", descripcion:' Alpes suizos. Son famosos y una de las atracciones de Suiza, ocupan más del 70% del territorio y se distribuyen en los sectores centrales y meridionales, mientras que el Jura hace en el noroeste.Estas maravillas naturales son parte del mayor sistema montañoso de Europa y se reconocen por sus fantásticos picos con formas puntiagudas y sus grandes gargantas escarpadas.', cantidad:'1',precio:''},
+   { 'paquete': 'Suiza', imagen: "../../assets/imagenes/montania.png", descripcion:' Alpes suizos. Son famosos y una de las atracciones de Suiza, ocupan más del 70% del territorio y se distribuyen en los sectores centrales y meridionales, mientras que el Jura hace en el noroeste.Estas maravillas naturales son parte del mayor sistema montañoso de Europa y se reconocen por sus fantásticos picos con formas puntiagudas y sus grandes gargantas escarpadas.', cantidad:'1',precio:'2500,00'},
    { 'paquete': 'Isla del Caribe', imagen: "../../assets/imagenes/isla.png", descripcion:'Las Islas del Caribe es un enorme archipiélago situado en el mar Caribe, que se puede subdividir en unas pocas regiones diferentes: el archipiélago Lucayan, las grandes Antillas, pequeñas Antillas y las islas ABC. Hay 13 Estados soberanos y 17 territorios dependientes del Caribe, y los idiomas predominantes son el criollo inglés, español, Francés, holandés y antillano. El Caribe se extiende a través de más de 1,06 millones de millas cuadradas y está principalmente situado entre América del norte y América del sur.', cantidad:'1',precio:'3500,00'},
    { 'paquete': 'Disney', imagen: "../../assets/imagenes/disney.jpg", descripcion:'Parque Temático Magic Kingdom – Todo será más mágico y musical que nunca en el 2019 si nos acompañas en Mickey & Minnie’s Surprise Celebration.Te esperan nuevas experiencias de entretenimiento, productos, comidas y bebidas especiales, incluyendo Move It! Shake It! MousekeDance It! Street Party', cantidad:'1',precio:'3500,00'},
    { 'paquete': 'Muralla China', imagen: "../../assets/imagenes/china.jpg", descripcion:'Accede a la Gran Muralla de Mutianyu con un traslado en autobús con opciones desde el centro de Pekín. Disfruta de horario y punto de encuentro fijos con salidas diarias. Consigue acceso a Mutianyu y el billete de teleférico con tu traslado (opcional).', cantidad:'1',precio:'2995,00'},
@@ -94,21 +95,22 @@ export class CompraComponent implements OnInit {
   ];
   
   title:string = 'Angular Crud';
-  
+  precio: Number =0;
+  precio2: Number =0;
   msg:string = '';
   model:any = {};
   model2:any = {};
   hideUpdate:boolean = true;
 
-  addEmployee():void{
-    this.employees.push(this.model);
+  addEmployee(i):void{
+    this.compras.push(this.employees[i]);
     this.msg = 'campo agregado';
   }
 
   deleteEmployee(i):void {
     var answer = confirm('Estas seguro querer eliminarlo?');
     if(answer) {
-      this.employees.splice(i, 1);
+      this.compras.splice(i, 1);
       this.msg = 'campo eliminado';
     }
   }
@@ -116,23 +118,25 @@ export class CompraComponent implements OnInit {
   myValue;
   editEmployee(i):void {
     this.hideUpdate = false;
-    this.model2.paquete = this.employees[i].paquete;
-    this.model2.imagen = this.employees[i].imagen;
-    this.model2.descripcion= this.employees[i].descripcion;
     this.model2.cantidad = this.employees[i].cantidad;
-    this.model2.precio= this.employees[i].precio;
     this.myValue = i;
   }
 
   updateEmployee():void {
+   
     let i = this.myValue;
     for(let j = 0; j < this.employees.length; j++){
       if(i == j) {
-        this.employees[i] = this.model2;
+        this.precio = Number.parseFloat(this.compras[i].precio)/Number.parseFloat(this.compras[i].cantidad);
+        console.log(this.precio);
+        this.compras[i].cantidad = this.model2.cantidad;
+        this.precio2 =Number(this.model2.cantidad)*Number(this.precio);
+        this.compras[i].precio = this.precio2.toFixed(2).toString();
         this.msg = 'campo actualizado';
         this.model2 = {};
       }
     }
+    this.hideUpdate = true;
   }
 
   closeAlert():void {
