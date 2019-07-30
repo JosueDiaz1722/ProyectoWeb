@@ -35,7 +35,7 @@ import {MenuItem} from 'primeng/api';
             color: #555555;
         }
     `],
-    encapsulation: ViewEncapsulation.None
+    encapsulation: ViewEncapsulation.None,
 })
 
 

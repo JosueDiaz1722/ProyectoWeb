@@ -18,6 +18,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import {StepsModule} from 'primeng/steps';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     BrowserAnimationsModule,
     MatButtonModule, MatCheckboxModule,
     NgImageSliderModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    StepsModule,
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [],
