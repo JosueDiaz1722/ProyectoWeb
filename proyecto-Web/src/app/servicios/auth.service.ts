@@ -13,7 +13,7 @@ export class AuthService {
   ) { }
 
   logout(){
-    return this.afAuth.auth.signOut
+    return this.afAuth.auth.signOut()
   }
 
   registerUser(email: string,pass: string){

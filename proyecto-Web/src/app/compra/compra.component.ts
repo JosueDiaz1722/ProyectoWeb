@@ -41,7 +41,7 @@ import {MenuItem} from 'primeng/api';
 export class CompraComponent implements OnInit {
 
   items: MenuItem[];
-
+    
     activeIndex: number = 0;
     paso1=true;
     paso2=false;

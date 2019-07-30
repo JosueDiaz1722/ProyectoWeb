@@ -43,7 +43,8 @@
                                 <a class="nav-link ml-3 my-1" routerLink="registro" style="color: black">Regristrarte</a>
                               </li>
                               <li *ngIf="isLogin">
-                                  <a class="nav-link ml-3 my-1"  routerLink="" style="color: black" (click)='onClickLogout'>Logout</a>
+                                  <a class="nav-link ml-3 my-1"  routerLink="perfil" style="color: black" >Perfil</a>
+                                  <a class="nav-link ml-3 my-1"  routerLink="" style="color: black" (click)="onClickLogout()">Logout</a>
                               </li>  
                               </nav>
                         </ul>

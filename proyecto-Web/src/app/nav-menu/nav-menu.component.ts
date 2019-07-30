@@ -29,6 +29,7 @@ export class NavMenuComponent implements OnInit {
           this.isLogin=true;
           this.nombreUser=auth.displayName;
           this.emailUser= auth.email;
+          console.log('si');
         }else{
           this.isLogin = false;
         }
@@ -37,6 +38,7 @@ export class NavMenuComponent implements OnInit {
 
     onClickLogout(){
       this.authService.logout();
+      this.ngOnInit();
     }
 
 }

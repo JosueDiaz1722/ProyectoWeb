@@ -8,7 +8,7 @@ import {CompraComponent} from './compra/compra.component'
 import {PerfilComponent} from './perfil/perfil.component'
 import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
-
+import {AuthGuard} from './guards/auth.guard'
 
 const routes: Routes = [
   {
@@ -34,7 +34,8 @@ const routes: Routes = [
   ,
   {
     path:'perfil',
-    component: PerfilComponent
+    component: PerfilComponent,
+    canActivate: [AuthGuard]
   },
   {
     path:'login',
