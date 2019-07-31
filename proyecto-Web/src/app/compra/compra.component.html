@@ -17,55 +17,59 @@
               <h1 class="text-right" style="color:rgb(4, 4, 63)"><b>PEDIDO</b></h1>
               <h2 class="text-left" style="color:rgb(4, 4, 63)"><b>TU COMPRA</b></h2>
               
-          <form class="text-left border border-light p-5">
+          <form class="text-left border border-light ">
            
               <div class="row">
                   
-                  <div class="col-lg-4">
-                      <form class="text-left border border-light p-5">
+                <div class="col-lg-4 col-md-3 col-sm-4" >
+                <form class="text-left border border-light ">
                 <h2>Paquetes</h2>
                 <div class="row"> 
-                  <div class="col-sm-3">
-                      <table class="table table-bordered">
-                          <thead>
-                            <tr>
-                              <th>Paquete</th>
-                              <th>Imagen</th>
-                              <th>Precio</th>                              
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr *ngFor="let employee of employees; let i = index">
-                              <td>{{employee.paquete}}</td>
-                              <td>
-                                <img class="imagen" src={{employee.imagen}} alt="">
-                              </td>
-                  
-                              <td>{{employee.precio}}</td>
-                              
-                              <td>
-                                <a (click)="addEmployee(i)" class="btn btn-primary button"style="background-color: rgba(26, 55, 77, 0.877)`; color: white;">
-                                  Añadir
-                                </a>
-                              </td>
-                            </tr>
-                  
-                          </tbody>
-                        </table>
+            
+                  <div class="col-sm-2 col-md-2 col-lg-2">
+                    <form action="">
+                        <table class="table table-bordered" >
+                            <thead>
+                              <tr>
+                                <th>Paquete</th>
+                                <th>Imagen</th>
+                                <th>Precio</th>                              
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let employee of employees; let i = index">
+                                <td>{{employee.paquete}}</td>
+                                <td>
+                                  <img class="imagen" src={{employee.imagen}} alt="">
+                                </td>
+                    
+                                <td>{{employee.precio}}</td>
+                                
+                                <td>
+                                  <a (click)="addEmployee(i)" class="btn btn-primary button"style="background-color: rgba(26, 55, 77, 0.877)`; color: white;">
+                                    Añadir
+                                  </a>
+                                </td>
+                              </tr>
+                    
+                            </tbody>
+                          </table>
+                    </form>
+                     
                   </div>
                 
                 </div>
               </form>
               </div>
             
-
             
-              <div class="col-lg-8">
-                  <form class="text-left border border-light p-5">
+              
+              <div class="col-lg-7 col-md-7" style="margin-left: 4%;"  >
+                <form class="text-left border border-light " >
                 <div class="row">
-                  <div class="col-sm-8 col-lg-12">
+                  <div class="col-sm-8 col-md-12 col-lg-12 " >
                     <h2>Compra </h2>
-                    <table class="table table-bordered">
+                    <table class="table table-bordered" style="width: 100%">
                         <thead>
                           <tr>
                             <th>Paquete</th>
