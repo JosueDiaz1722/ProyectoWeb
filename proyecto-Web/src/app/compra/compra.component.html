@@ -18,30 +18,11 @@
               <h2 class="text-left" style="color:rgb(4, 4, 63)"><b>TU COMPRA</b></h2>
               
           <form class="text-left border border-light p-5">
-            <!--<ng-template ngFor let-item [ngForOf]="lista2" let-i="index" [ngForTrackBy]="trackByFn">
-              
-                <div class="row">
-                  <div class="col-lg-4 text-center">
-                      <img src={{item.imagen}} width="55%" height="80%"/>
-                  </div>
+           
+              <div class="row">
+                  
                   <div class="col-lg-4">
-                      {{item.descripcion}}
-                  </div>
-                  <div class="col-lg-1">
-                    <p style="border: ridge #82828a 1px; text-align: center">{{item.numero}}</p>
-                  </div>
-                  <div class="col-lg-2 text-center">
-                     {{item.precio}}
-                  </div>
-                  <div class="col-lg-1; col text-center">
-                    <button class="boton2"><h4>X</h4></button>
-                  </div>
-                </div>
-                
-              <br/>
-              <hr class="new1"/>
-            </ng-template>-->
-            <div class="container app">
+                      <form class="text-left border border-light p-5">
                 <h2>Paquetes</h2>
                 <div class="row"> 
                   <div class="col-sm-3">
@@ -63,7 +44,7 @@
                               <td>{{employee.precio}}</td>
                               
                               <td>
-                                <a (click)="addEmployee(i)" class="btn btn-success">
+                                <a (click)="addEmployee(i)" class="btn btn-primary button"style="background-color: rgba(26, 55, 77, 0.877)`; color: white;">
                                   Añadir
                                 </a>
                               </td>
@@ -74,10 +55,16 @@
                   </div>
                 
                 </div>
- 
+              </form>
+              </div>
+            
+
+            
+              <div class="col-lg-8">
+                  <form class="text-left border border-light p-5">
                 <div class="row">
-                  <div class="col-sm-8 col-lg-9">
-                    <h2>Compra: </h2>
+                  <div class="col-sm-8 col-lg-12">
+                    <h2>Compra </h2>
                     <table class="table table-bordered">
                         <thead>
                           <tr>
@@ -96,14 +83,16 @@
                               <img class="imagen" src={{employee.imagen}} alt="">
                             </td>
                 
-                            <td>{{employee.descripcion}}</td>
+                            <td style="text-align: justify">{{employee.descripcion}}</td>
                             <td>{{employee.cantidad}}</td>
                             <td>{{employee.precio}}</td>
                             <td>
-                              <a (click)="editEmployee(i)" class="btn btn-success">
+                              <a (click)="editEmployee(i)" class="btn btn-info button"style="background-color: rgba(26, 55, 77, 0.877)`; color: white; float: center;">
                                 Edit
                               </a>
-                              <a (click)="deleteEmployee(i)" class="btn btn-danger">
+                              <br/>
+                              <br/>
+                              <a (click)="deleteEmployee(i)" class="btn btn-outline-danger "style="background-color: rgba(26, 55, 77, 0.877)`; color: red;">
                                 Delete
                               </a>
                             </td>
@@ -137,7 +126,14 @@
                     </form>
                   </div>
                 </div>
+              </form>
               </div>
+            
+              </div>
+            
+
+
+
             <button (click)="StepCompra()" class="boton">Hacer pedido/actualizar</button>
             
           </form>
@@ -365,23 +361,23 @@
                   <div class="col-lg-4 text-center">
                     <img src={{item.imagen}} width="55%" height="80%"/>
                   </div>
-                  <div class="col-lg-4">
+                  <div class="col-lg-4" style="text-align: justify">
                       {{item.descripcion}}
                   </div>
                   <div class="col-lg-1">
-                    <p style="border: ridge #82828a 1px; text-align: center"> {{item.numero}}</p>
+                    <p style="border: ridge #82828a 1px; text-align: center"> {{item.cantidad}}</p>
                   </div>
                   <div class="col-lg-2 text-center">
                      {{item.precio}}
                   </div>
                   <div class="col-lg-1; col text-center">
-                    <button class="boton2"><h4>X</h4></button>
+                    
                   </div>
                 </div>
               <br/>
               <hr class="new1"/>
             </ng-template>
-            <h4 style="text-align: right"> <b>  $25.00</b></h4>
+            
           </form>
         </form>
           </div>
